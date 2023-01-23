@@ -61,3 +61,11 @@ jobs:
     steps:
     - name: curl google.com
       run: curl https://www.google.com/
+
+  message:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: always()
+    steps:
+    - name: Message
+      run: echo Pipeline executed
