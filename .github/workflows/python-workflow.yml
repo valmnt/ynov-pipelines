@@ -1,6 +1,5 @@
 name: python-workflow
-on:
-  push:
+on: [workflow_dispatch, push]
 
 jobs:
   lint_flake8:
@@ -61,4 +60,4 @@ jobs:
     needs: test
     steps:
     - name: curl google.com
-      run: curl https://google.com/
+      run: curl https://www.google.com/
